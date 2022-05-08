@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Vegetable Quiz</string>
+    <string name="play_again">Play Again</string>
+    <!--string name="submit_button">Submit</string>
+    <string name="title_android_trivia_question">Android Trivia (%1$d/%2$d)</string-->
+    <string name="play">Play</string>
+    <string name="you_lost">You Lost!!!</string>
+    <string name="you_won">You Won!!!</string>
+    <string name="send">Send</string>
+    <string name="question_quiz1">What is that vegetable\'s name?</string>
+    <string name="answers_quiz1_option1">Artichoke</string>
+    <string name="answers_quiz1_option2" translatable="false">Aliche</string>
+    <string name="answers_quiz1_option3">Artchoke</string>
+    <string name="answers_quiz1_option4">Artishoke</string>
+    <string name="question_quiz2">What is that vegetable\'s name?</string>
+    <string name="answers_quiz2_option1">Asparagus</string>
+    <string name="answers_quiz2_option2">Asparagu</string>
+    <string name="answers_quiz2_option3">Aspargus</string>
+    <string name="answers_quiz2_option4">Aspargus</string>
+    <string name="question_quiz3">What is that vegetable\'s name?</string>
+    <string name="answers_quiz3_option1">Bell Pepper</string>
+    <string name="answers_quiz3_option2">Red Pepper</string>
+    <string name="answers_quiz3_option3">Carolina Reaper</string>
+    <string name="answers_quiz3_option4">Red Reaper</string>
+    <string name="question_quiz4">What is that vegetable\'s name?</string>
+    <string name="answers_quiz4_option1">Carrot</string>
+    <string name="answers_quiz4_option2">Carot</string>
+    <string name="answers_quiz4_option3">Zanahoria</string>
+    <string name="answers_quiz4_option4">Zanaoria</string>
+    <string name="question_quiz5">What is that vegetable\'s name?</string>
+    <string name="answers_quiz5_option1">Corn</string>
+    <string name="answers_quiz5_option2">Pop</string>
+    <string name="answers_quiz5_option3">Pop Corn</string>
+    <string name="answers_quiz5_option4">Popstar</string>
+    <string name="question_quiz6">What is that vegetable\'s name?</string>
+    <string name="answers_quiz6_option1">Pumpkin</string>
+    <string name="answers_quiz6_option2">Pompkin</string>
+    <string name="answers_quiz6_option3">Pumpklin</string>
+    <string name="answers_quiz6_option4">Pompklin</string>
+</resources>

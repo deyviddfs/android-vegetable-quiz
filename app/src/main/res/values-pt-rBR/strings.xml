@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vegetable Quiz</string>
+    <string name="play_again">Voltar ao Início</string>
+    <string name="play">Jogar</string>
+    <string name="you_lost">Você perdeu!!!</string>
+    <string name="you_won">Você venceu!!!</string>
+    <string name="send">Enviar</string>
+    <string name="question_quiz1">Qual o nome deste vegetal?</string>
+    <string name="answers_quiz1_option1">Alcachofra</string>
+    <string name="answers_quiz1_option2">Aliche</string>
+    <string name="answers_quiz1_option3">Açafrão</string>
+    <string name="answers_quiz1_option4">Alface</string>
+    <string name="question_quiz2">Qual o nome deste vegetal?</string>
+    <string name="answers_quiz2_option1">Aspargo</string>
+    <string name="answers_quiz2_option2">Açafrão</string>
+    <string name="answers_quiz2_option3">Alcachofra</string>
+    <string name="answers_quiz2_option4">Aliche</string>
+    <string name="question_quiz3">Qual o nome deste vegetal?</string>
+    <string name="answers_quiz3_option1">Pimentão</string>
+    <string name="answers_quiz3_option2">Pimenta vermelha</string>
+    <string name="answers_quiz3_option3">Morango</string>
+    <string name="answers_quiz3_option4">Melancia</string>
+    <string name="question_quiz4">Qual o nome deste vegetal?</string>
+    <string name="answers_quiz4_option1">Cenoura</string>
+    <string name="answers_quiz4_option2">Tomate</string>
+    <string name="answers_quiz4_option3">Batata</string>
+    <string name="answers_quiz4_option4">Banana</string>
+    <string name="question_quiz5">Qual o nome deste vegetal?</string>
+    <string name="answers_quiz5_option1">Milho</string>
+    <string name="answers_quiz5_option2">Pamonha</string>
+    <string name="answers_quiz5_option3">Cural</string>
+    <string name="answers_quiz5_option4">Bolo de milho</string>
+    <string name="question_quiz6">Qual o nome deste vegetal?</string>
+    <string name="answers_quiz6_option1">Abóbora</string>
+    <string name="answers_quiz6_option2">Cebola</string>
+    <string name="answers_quiz6_option3">Caju</string>
+    <string name="answers_quiz6_option4">Goiaba</string>
+</resources>
