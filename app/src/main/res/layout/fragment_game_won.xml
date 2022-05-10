@@ -5,10 +5,10 @@
     tools:context="com.example.android.navigation.GameWonFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gameWonConstraintLayout"
+        android:id="@+id/constraintLayoutGameWon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/youWinBackground">
+        android:background="@color/backgroudWon">
 
         <ImageView
             android:id="@+id/imageViewWon"

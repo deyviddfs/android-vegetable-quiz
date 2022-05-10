@@ -5,13 +5,13 @@
     tools:context="com.example.android.navigation.TitleFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/titleConstraint"
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imageViewIcon"
-            android:layout_width="@dimen/empty"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/image_header_height"
             android:layout_marginStart="@dimen/horizontal_margin"
             android:layout_marginEnd="@dimen/horizontal_margin"
@@ -28,8 +28,8 @@
             android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/horizontal_margin"
-            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/defaul_margin"
+            android:layout_marginEnd="@dimen/defaul_margin"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
             android:text="@string/play"

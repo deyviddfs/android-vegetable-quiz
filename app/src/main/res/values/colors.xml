@@ -7,7 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <!--color name="youWinDark">#35A571</color-->
-    <color name="youWinBackground">#8BC34A</color>
-    <color name="gameOverBackground">#FF5722</color>
+    <color name="backgroudWon">#8BC34A</color>
+    <color name="backgroundGameOver">#FF5722</color>
 </resources>

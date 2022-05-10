@@ -8,17 +8,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import br.com.deyvidfernandes.androidvegetablequiz.databinding.FragmentGameBinding
+import br.com.deyvidfernandes.androidvegetablequiz.model.Answer
 import br.com.deyvidfernandes.androidvegetablequiz.model.Question
 
 class GameFragment : Fragment() {
 
     private val questions: MutableList<Question> = mutableListOf()
     lateinit var currentQuestion: Question
-    lateinit var answers: MutableList<String>
-//    private var questionIndex = 0
+    lateinit var answers: MutableList<Answer>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
 
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
@@ -35,23 +35,16 @@ class GameFragment : Fragment() {
             val checkedId = binding.radioGroupQuestions.checkedRadioButtonId
             // Verifica se tem uma opção escolhida
             if (-1 != checkedId) {
-                var answerIndex = 0
-                when (checkedId) {
-                    R.id.radioButtonSecondAnswer -> answerIndex = 1
-                    R.id.radioButtonThirdAnswer -> answerIndex = 2
-                    R.id.radioButtonFourthAnswer -> answerIndex = 3
-                }
-
-                // The first answer in the original question is always the correct one, so if our
-                // answer matches, we have the correct answer.
-                if (answers[answerIndex] == currentQuestion.answers[0]) {
-//                    questionIndex++
+                val radioButton: View = binding.radioGroupQuestions.findViewById(checkedId)
+                val answerIndex = binding.radioGroupQuestions.indexOfChild(radioButton)
+                //Pega a resposta selecionada
+                val answerChecked = answers[answerIndex]
+                if(answerChecked.correct){
                     // We've won!  Navigate to the gameWonFragment.
                     view.findNavController()
                         .navigate(R.id.action_gameFragment_to_gameWonFragment)
                     //Safe Arguments
-//                        view.findNavController()
-//                            .navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
+//                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
                     view.findNavController().
@@ -67,15 +60,17 @@ class GameFragment : Fragment() {
     private fun showQuestion(binding: FragmentGameBinding) {
         //Escolhe uma das questões e exibe na tela
         currentQuestion = questions[0]
+        //Cria uma nova lista com as respostas
         answers = currentQuestion.answers.toMutableList()
+        //Embaralha a lista de respostas
         answers.shuffle()
 
         binding.imageViewQuestion.setImageResource(currentQuestion.image)
         binding.textViewQuestion.text = currentQuestion.text
-        binding.radioButtonFirstAnswer.text = answers[0]
-        binding.radioButtonSecondAnswer.text = answers[1]
-        binding.radioButtonThirdAnswer.text = answers[2]
-        binding.radioButtonFourthAnswer.text = answers[3]
+        binding.radioButtonFirstAnswer.text = answers[0].text
+        binding.radioButtonSecondAnswer.text = answers[1].text
+        binding.radioButtonThirdAnswer.text = answers[2].text
+        binding.radioButtonFourthAnswer.text = answers[3].text
     }
 
     private fun prepareQuestions() {
@@ -84,10 +79,10 @@ class GameFragment : Fragment() {
             Question(
                 getString(R.string.question_quiz1), R.drawable.ic_questions_artichoke,
                 listOf(
-                    getString(R.string.answers_quiz1_option1),
-                    getString(R.string.answers_quiz1_option2),
-                    getString(R.string.answers_quiz1_option3),
-                    getString(R.string.answers_quiz1_option4)
+                    Answer(getString(R.string.answers_quiz1_option1),true),
+                    Answer(getString(R.string.answers_quiz1_option2),false),
+                    Answer(getString(R.string.answers_quiz1_option3),false),
+                    Answer(getString(R.string.answers_quiz1_option4),false)
                 )
             )
         )
@@ -96,10 +91,10 @@ class GameFragment : Fragment() {
             Question(
                 getString(R.string.question_quiz2), R.drawable.ic_questions_asparagus,
                 listOf(
-                    getString(R.string.answers_quiz2_option1),
-                    getString(R.string.answers_quiz2_option2),
-                    getString(R.string.answers_quiz2_option3),
-                    getString(R.string.answers_quiz2_option4)
+                    Answer(getString(R.string.answers_quiz2_option1),true),
+                    Answer(getString(R.string.answers_quiz2_option2),false),
+                    Answer(getString(R.string.answers_quiz2_option3),false),
+                    Answer(getString(R.string.answers_quiz2_option4),false)
                 )
             )
         )
@@ -108,10 +103,10 @@ class GameFragment : Fragment() {
             Question(
                 getString(R.string.question_quiz3), R.drawable.ic_questions_bell_pepper,
                 listOf(
-                    getString(R.string.answers_quiz3_option1),
-                    getString(R.string.answers_quiz3_option2),
-                    getString(R.string.answers_quiz3_option3),
-                    getString(R.string.answers_quiz3_option4)
+                    Answer(getString(R.string.answers_quiz3_option1), true),
+                    Answer(getString(R.string.answers_quiz3_option2), false),
+                    Answer(getString(R.string.answers_quiz3_option3), false),
+                    Answer(getString(R.string.answers_quiz3_option4), false)
                 )
             )
         )
@@ -120,10 +115,10 @@ class GameFragment : Fragment() {
             Question(
                 getString(R.string.question_quiz4), R.drawable.ic_questions_carrot,
                 listOf(
-                    getString(R.string.answers_quiz4_option1),
-                    getString(R.string.answers_quiz4_option2),
-                    getString(R.string.answers_quiz4_option3),
-                    getString(R.string.answers_quiz4_option4)
+                    Answer(getString(R.string.answers_quiz4_option1),true),
+                    Answer(getString(R.string.answers_quiz4_option2),false),
+                    Answer(getString(R.string.answers_quiz4_option3),false),
+                    Answer(getString(R.string.answers_quiz4_option4), false)
                 )
             )
         )
@@ -132,10 +127,10 @@ class GameFragment : Fragment() {
             Question(
                 getString(R.string.question_quiz5), R.drawable.ic_questions_corn,
                 listOf(
-                    getString(R.string.answers_quiz5_option1),
-                    getString(R.string.answers_quiz5_option2),
-                    getString(R.string.answers_quiz5_option3),
-                    getString(R.string.answers_quiz5_option4)
+                    Answer(getString(R.string.answers_quiz5_option1), true),
+                    Answer(getString(R.string.answers_quiz5_option2), false),
+                    Answer(getString(R.string.answers_quiz5_option3), false),
+                    Answer(getString(R.string.answers_quiz5_option4), false)
                 )
             )
         )
@@ -144,10 +139,10 @@ class GameFragment : Fragment() {
             Question(
                 getString(R.string.question_quiz6), R.drawable.ic_questions_pumpkin,
                 listOf(
-                    getString(R.string.answers_quiz6_option1),
-                    getString(R.string.answers_quiz6_option2),
-                    getString(R.string.answers_quiz6_option3),
-                    getString(R.string.answers_quiz6_option4)
+                    Answer(getString(R.string.answers_quiz6_option1), true),
+                    Answer(getString(R.string.answers_quiz6_option2), false),
+                    Answer(getString(R.string.answers_quiz6_option3), false),
+                    Answer(getString(R.string.answers_quiz6_option4), false)
                 )
             )
         )

@@ -10,29 +10,26 @@
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/frameLayout"
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageViewQuestion"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/image_header_height"
-                android:layout_marginStart="@dimen/horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
-                android:layout_marginEnd="@dimen/horizontal_margin"
-                android:layout_marginBottom="@dimen/vertical_margin"
+                android:layout_margin="@dimen/defaul_margin"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toTopOf="@+id/textViewQuestion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed"
-                android:contentDescription="Definir" />
+                android:contentDescription="@string/question_quiz1" />
 
             <TextView
                 android:id="@+id/textViewQuestion"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/defaul_margin"
                 android:fontFamily="sans-serif"
@@ -49,7 +46,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/defaul_margin"
-                android:animateLayoutChanges="true"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +55,7 @@
                     android:id="@+id/radioButtonFirstAnswer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:layout_marginBottom="@dimen/defaul_margin"
                     android:checked="true"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="@tools:sample/cities" />
@@ -68,7 +64,7 @@
                     android:id="@+id/radioButtonSecondAnswer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:layout_marginBottom="@dimen/defaul_margin"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="@tools:sample/cities" />
 
@@ -76,7 +72,7 @@
                     android:id="@+id/radioButtonThirdAnswer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:layout_marginBottom="@dimen/defaul_margin"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="@tools:sample/cities" />
 

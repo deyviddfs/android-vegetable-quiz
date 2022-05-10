@@ -5,10 +5,10 @@
     tools:context="com.example.android.navigation.GameOverFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gameOverConstraintLayout"
+        android:id="@+id/constraintLayoutGameOver"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/gameOverBackground">
+        android:background="@color/backgroundGameOver">
 
         <ImageView
             android:id="@+id/imageViewLost"
